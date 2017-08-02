@@ -1,0 +1,14 @@
+# settings for WinSCP
+
+option batch on
+option confirm off
+
+# open ftp connection
+open ftp://obmen:ftppassw@217.23.138.208/
+
+# synchronize files from server
+synchronize -criteria=time -transfer=binary remote c:\obmen_site\webdata /
+
+exit
+
+#C:\Program Files (x86)\WinSCP\WinSCP.exe /console  /script="C:\scp_sync.txt"
